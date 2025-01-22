@@ -311,7 +311,7 @@ def main():
         st.markdown(
             """
             <h1 class="stTitle">
-                Cloud Invoice Data Extractor
+                 Invoice Data Extractor
             </h1>
             """,
             unsafe_allow_html=True
@@ -321,10 +321,7 @@ def main():
     if 'results' not in st.session_state:
         st.session_state.results = []
 
-    # Clear button
-    if st.button("Clear All Data"):
-        st.session_state.results = []
-        st.experimental_rerun()
+  
 
     # File uploader
     uploaded_files = st.file_uploader(
@@ -404,6 +401,11 @@ def main():
                 "text/csv",
                 key=f"csv_{idx}"
             )
+
+  # Clear button
+    if st.button("Clear All Data"):
+        st.session_state.results = []
+        st.experimental_rerun()
 
 
 if __name__ == "__main__":
