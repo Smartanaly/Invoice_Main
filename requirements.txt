@@ -11,3 +11,5 @@ requests
 pymupdf
 python-docx
 aspose-words
+docx2txt
+
